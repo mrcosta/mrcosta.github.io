@@ -46,7 +46,6 @@ highlighter: rouge
 permalink:        pretty
 
 exclude: 
-  - CNAME
   - Gemfile
   - Rakefile
   - README.md
