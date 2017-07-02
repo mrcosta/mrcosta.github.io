@@ -11,9 +11,8 @@ url: https://mrcosta.github.io
 
 # Harmony theme configuration. Please change accordingly.
 harmony:
-  name: MrCosta
-  # Little description about your site
-  description: Harmony is free responsive jekyll theme.
+  name: Mateus Costa
+  description: Some thoughts about the world, the universe and everything else. Ah, and also about coding!
   # 'meta_description:' Write an awesome description for your new site here.
   # It will appear in your document head meta (for Google search results) and 
   # in your feed.xml site description.
@@ -32,11 +31,8 @@ harmony:
 
   # Profile links, leave blank to ignore
   social: 
-    github: gayanvirajith
-    twitter: gayanvirajith
-    facebook: gayanvirajith
-    gplus: +GayanVirajith
-    dribble: gayan
+    github: mrcosta
+    twitter: mrcambota
     pinterest: 
   # Toggle disclaimer in footer
   show_disclaimer: true
