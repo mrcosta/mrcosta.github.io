@@ -6,7 +6,7 @@ comments: true
 description: " These days I was working with Jetty (*version 2.19*) to build a Restful API and it's come in hand with Jackson. What it means that some basic JSON validations will happen automagically. Nice, right? Hum...Let'see."
 categories:
 - java, api, rest, parser
-permalink: sample-post
+permalink: 2017-07-03-override-jerseys-jackson-validation-exception
 ---
 These days I was working with Jetty (*version 2.19*) to build a Restful API and it's come in hand with Jackson. What it means that some basic JSON validations will happen automagically. Nice, right? Hum...Let'see.
 
