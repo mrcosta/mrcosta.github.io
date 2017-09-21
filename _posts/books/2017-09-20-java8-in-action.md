@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Java 8 in Action - Review"
+title: "Java 8 in Action"
 date: 2017-09-20 12:00:00 
 comments: true
 description: "Review of Java 8 in Action by Raoul-Gabriel Urma, Mario Fusco and Malan Mycroft"
