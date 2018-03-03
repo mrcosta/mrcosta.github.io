@@ -172,7 +172,7 @@ a.default-anchor {
 }
 
 div.default-page-content {
-  h1, h2, h3, h4, h5, h6 { color: $base-00; }
+  h2, h3, h4, h5, h6 { color: $base-00; }
 }
 
 body {
@@ -208,6 +208,7 @@ header.main-header {
     width: 100%;
     text-align: center;
     padding: 15px;
+    margin-top: 15px;
   }
   ul li {
     display: inline-block;
@@ -370,6 +371,10 @@ div.page-content {
   @include MQ(M) {
     min-height: 400px;
   }
+
+  h1 {
+    color: $base-08;
+  }
 }
 
 div.page-content {
@@ -452,7 +457,7 @@ div.page-content {
     margin-bottom: 1.1em;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     padding-bottom: 5px;
   }
 }
@@ -488,10 +493,8 @@ body.theme-base-01 {
   }
 
   div.page-content {
-    h1, h2, h3, h4, h5, h6 { color: $base-01; }
+    h2, h3, h4, h5, h6 { color: $base-01; }
   }
-
-
 }
 
 /* --------------------------------
@@ -502,7 +505,7 @@ body.theme-base-01 {
 
 header.main-header {
   padding: 1em 0;
-  @include MQ(M) { padding: 2em 0; }
+  @include MQ(M) { padding: 0.5em 0; }
 }
 footer.main-footer {
   padding: 1em 0;
@@ -634,12 +637,9 @@ div.post {
   }
 }
 p.post-meta {
-  line-height: 1.6;
-  letter-spacing: 2px;
   @include font-size(12px);
   overflow: hidden;
   display: block;
-  padding: 1em 0;
   color: #7A7A7A;
   @include MQ(M) {
     @include font-size(16px);
@@ -749,4 +749,14 @@ th {
 tbody tr:nth-child(odd) td,
 tbody tr:nth-child(odd) th {
   background-color: $base-05;
+}
+
+// custom
+.site-description {
+  line-height: 0.95;
+}
+
+.site-title {
+  line-height: 0.95;
+  margin-bottom: 5px;
 }

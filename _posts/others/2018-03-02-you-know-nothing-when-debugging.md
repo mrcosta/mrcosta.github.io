@@ -1,3 +1,14 @@
+---
+layout: post
+title: "You know nothing when debugging"
+date: 2018-03-02 22:00:00 
+comments: true
+description: "A little story about something hard to find"
+categories:
+- debugging, cronjobs, queues
+permalink: 2018-03-02-you-know-nothing-when-debugging
+---
+
 # why
 
 In my current project, we had a problem in production that it was hard to track. We spent almost two entire days to understand what happened and to fix the problem. The idea is to give some debugging tips and also to remember this
@@ -5,15 +16,17 @@ specific fact for myself from the future.
 
 # the problem
 
-## the flow
+### the flow
 
 Every hour a cronjob sends a message to a queue and the consumer/worker that is subscribed to it processes the message.
 
-## what is processed:
+### what is processed:
 
 In our domain, we have the model client that has a *contract status* with the following statuses in the following order
 
-`TO_BE_SENT --> SENT --> ORDER_RECEIVED --> ORDER_IN_PROGRESS --> CONTRACT_READY`
+```ruby
+TO_BE_SENT --> SENT --> ORDER_RECEIVED --> ORDER_IN_PROGRESS --> CONTRACT_READY
+```
 
 In order to update the status, we call a third party that will give us the update of our client regarding its contract status.
 
@@ -27,7 +40,7 @@ And the way that we were building this parameter was based on the previous times
 
 Users contract status were not been updated properly. What, where exactly, how and why this was happenning?
 
-# Debugging
+# debugging
 
 When you start debugging something, one of the first things that you need to know is what it's been done in that piece of code: 
 
@@ -37,7 +50,7 @@ When you start debugging something, one of the first things that you need to kno
 * what are the results returned?
 * during this processing, what is it been used: databases, cronjobs, interceptors, external requests?
 
-## debugging - "that piece of code"
+## debugging that piece of code
 
 In my opinion, based on the explanation I gave above about what was been processed, it seems not complex, right? In the end would be just an update in a state of a model in the database. So I thought I could easily debug this.
 
@@ -66,13 +79,11 @@ And why I was wrong? Because in the end the code was failing in the first, and i
 
 The exception? The user information from the database was not been parsed as the proper user to our domain.
 
-## but why learn everything again? one mistake is not enough
+## one mistake is not enough
 
 The reason for why this was happening?
 
-Well, pretty simple and, again, pretty hard to guess (at least for me). The user has a salutation that can assume one of the given values:
-
-`HERR` or `FRAU` (in German)
+Well, pretty simple and, again, pretty hard to guess (at least for me). The user has a salutation that can assume one of the given values: **HERR** or **FRAU** (in German)
 
 This values in our domain are expressed as an enum. The exception that we caught was basically complaining that it couldn't parse the value `Herr` to one of the expected values listed above.
 
@@ -80,13 +91,17 @@ Ok, seems fair, since our deserializer was not customized to read `Herr` and we 
 
 Conclusion: someone for sure changed the database and this value for some user. (This is another history why they can change the database). So let's check:
 
-`SELECT distinct(salutation) FROM user`
+```ruby
+SELECT distinct(salutation) FROM user
+```
 
 The results that were retrieved was always `HERR` and `FRAU`. Never `Herr`. *"It's impossible to this happen"* and after this unit and integration tests were borned to try to track the issue.
 
 No luck! But after complaining with my coworkers, someone suggested that maybe, the database was not case sensitive and it was returning the values that were most found. What do you think? Of course they were right. And one of the ways to do the correct SQL query was:
 
-`SELECT salutation FROM user WHERE salutation COLLATE utf8_bin NOT IN ('HERR', 'FRAU')`
+```ruby
+SELECT salutation FROM user WHERE salutation COLLATE utf8_bin NOT IN ('HERR', 'FRAU')
+```
 
 What was my mistake again? Assume that this query would be already case sensitive and it wasn't. 
 
