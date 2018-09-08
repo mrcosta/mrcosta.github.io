@@ -14,7 +14,7 @@ permalink: 2018-08-17-release-it
 
 ![Image]({{ site.url }}/assets/images/books/release-it.jpg)
 
-# **What this book is about it?**
+# **What the book is about?**
 
 We don't learn what a software should **NOT** do. When we finish a certain feature, if everything goes well during the QA, then it's just a matter to deploy it in production and then our work is finally done. 
 

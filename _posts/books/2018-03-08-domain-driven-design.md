@@ -13,11 +13,11 @@ permalink: 2018-03-08-domain-driven-design
 
 ![Image]({{ site.url }}/assets/images/books/ddd.jpg)
 
-# What this book is about it?
+# **What the book is about?**
 
 Applications are complex, solving real-world problems is complex. Give 1 problem to 10 different people and then you will have 10 different solutions, that probably have the same results. The idea of the book is to present some ideas on how to organize and approach to solve real-world problems. Is not necessarily about architecture, but more into how you can see the problem and represent in a way that developers and business people can understand each other better.
 
-# Why I read this book? 
+# **Why I read this book?**
 
 I really believe that clean and understandable code have a big role when developing systems. Reading code is one of the most important activities of a developer's daily and always present when
 modifying or adding a new piece of code.
@@ -25,7 +25,7 @@ modifying or adding a new piece of code.
 The aim of the book is to purpose an approach where your real-world problem is reflected in your codebase. In this way, you have one common language (called Ubiquitous Language) between all the people involved in the project. 
 Then, to understand how to do this in a better way it was for sure a wish that I had a long time ago.
 
-# The book
+# **The book**
 
 I had luck about reading this book: I can easily affirm that in most of the places that I worked people were pushing to a more DDD approach to be applied in our codebase even not knowing all the details about the subject.
 
