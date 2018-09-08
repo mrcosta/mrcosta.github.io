@@ -8,6 +8,8 @@ url: https://mrcosta.github.io
 
 disqus_shortname: mateuscosta
 
+future: true
+
 # Harmony theme configuration. Please change accordingly.
 harmony:
   name: Mateus Costa
