@@ -208,7 +208,7 @@ header.main-header {
     width: 100%;
     text-align: center;
     padding: 15px;
-    margin-top: 15px;
+    margin-bottom: 15px;
   }
   ul li {
     display: inline-block;
@@ -503,17 +503,12 @@ body.theme-base-01 {
 --------------------------------- */
 
 header.main-header {
-  padding: 1em 0;
-  @include MQ(M) { padding: 0.5em 0; }
+  padding: 0.5em 0;
 }
 footer.main-footer {
   padding: 1em 0;
   @include MQ(M) { padding: 1em 0; }
 }
-.page-content {
-  @include MQ(M) { padding: 1em 0; }
-}
-
 
 /* ---------------------------------
 
