@@ -147,7 +147,7 @@ hr {
 }
 
 /* bold text */
-strong, b { font-weight: 600; }
+strong, b { font-weight: 500; }
 
 /* italic */
 em, i { font-style: italic; }
@@ -626,6 +626,10 @@ div.post {
 
   &:last-child {
     border-bottom: none;
+  }
+
+  li > p {
+    display: inline;
   }
 }
 p.post-meta {
