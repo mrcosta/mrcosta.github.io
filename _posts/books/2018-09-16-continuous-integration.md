@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation"
+title: "Continuous Delivery (from Jez Humble)"
 date: 2018-09-16 11:00:00 
 comments: true
 description: "Review of Continuous Delivery"

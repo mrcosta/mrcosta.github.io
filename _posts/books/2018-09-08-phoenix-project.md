@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Phoenix Project: A Novel About IT, DevOps, and Helping Your Business Win"
+title: "The Phoenix Project"
 date: 2018-09-08 17:00:00 
 comments: true
 description: "Review of The Phoenix Project"
