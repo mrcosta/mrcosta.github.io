@@ -17,21 +17,21 @@ permalink: 2018-09-16-continuous-delivery
 
 # **What the book is about?**
 
-You can call it the Bible of Continuous Integration, but as the Bible, it has it's core learnings and then you need to adapt to your time and context.
+You can call it the Bible of Continuous Integration, but as the Bible, it has its core learnings and then you need to adapt to your time and context.
 
-The book gives you all the steps that you need to do in order to achieve a project with Continuous Integration and Continuous Delivery. Given that the books if from 2010, the "how" you should do this steps, depending on your background, it's a little bit outdated, but still with a lot of value if your focus is on what are the goals of each step.
+The book gives you all the steps that you need to do in order to achieve a project with Continuous Integration and Continuous Delivery. Given that the books it is from 2010, the "how" you should do this steps, depending on your background, it's a little bit outdated, but still with a lot of value if your focus is on what are the goals of each step.
 
 # **The book**
 
-I have experience with both practices and decide to read the book to have a more solid base that can give me more knowledge when talking about the subject. Given this, some of the subjects of the book I just skipped because I think some solutions for problems evolved when compared to the time that the book was written. I will focus to show and comment only about the things that I thought was interesting to me.
+I have experience with both practices and decide to read the book to have a more solid base that can give me more knowledge when talking about the subject. That said, some of the subjects of the book I just skipped because I think some solutions for problems evolved when compared to the time that the book was written. I will focus to show and comment only about the things that I thought was interesting to me.
 
 * **adapt the pipeline for your own project**: there is no silver bullet pipeline. You should do as you think that would be the best for your project (since you're still following the principles).
 
-* **benefits of continuous integration and delivery**: release faster, efficient and reliable, cheap, rapid and predictable.
+* **benefits of continuous integration and delivery**: release faster, efficient and reliable, cheap and predictable.
 
-* **too long, didn't read of the steps that you pipeline should have**: test (make sure application code works), create the executable, test coverage and quality of code, functional testing (business acceptance criteria), capacity/performance testing, showcase/manual testing, and the pipeline should give us visibility about these steps and their current status.
+* **"too long, didn't read" of the steps that you pipeline should have**: test (make sure application code works), create the executable, test coverage and quality of code, functional testing (business acceptance criteria), capacity/performance testing, showcase/manual testing, and the pipeline should give us visibility about these steps and their current status.
 
-* **why we should automate deploy and other CI tasks**: errors occur, is not repeatable, documentation usually makes assumptions about the level of the knowledge of the person. It's boring and repetitive, what makes easier to mistake and it's not auditable. We want to free people to do the interesting work and leave repetition to machines. Avoid absolute paths and manual steps in your configuration and deployment scripts. Also, try to monitor your deploys.
+* **why we should automate deploy and other CI tasks**: errors occur, is not reproducible, documentation usually makes assumptions about the person's knowledge level. It's boring and repetitive, what makes easier make a mistake and it's not auditable. We want to free people to do the interesting work and leave repetition to machines. Avoid absolute paths and manual steps in your configuration and deployment scripts. Also, try to monitor your deploys.
 
 * **the longer the release cycle, more assumptions about the environment it will appear**: we will not remember very clearly what was in the last deploy, or current status of the configuration of that environment (thus, avoid manual configuration between environments) and what is the status of our database.
 
@@ -39,7 +39,7 @@ I have experience with both practices and decide to read the book to have a more
 
 * **user version control system**: there are some specific chapters talking about different systems and this is one of the subjects that I consider that is kind common sense to use Git today.
 
-* **in software the way to reduce the pain is to do it more frequently**: if you have some process that is repetitive or that takes time, try to do it more often. It's going to be clear what are the things that you can improve and automate to make your life easier. Try to identify the bottleneck of your system with this.
+* **in software the way to reduce the pain is to do it more frequently**: if you have some process that is repetitive or that takes time, try to do it more often. It's going to be clear what are the things that you can improve and automate to make your life easier. Try to identify the bottleneck on your system with this.
 
 * **done means released and that's why it needs different people working together**: it's just not developers work, but also business work to validate if what you are delivering is correct.
 
@@ -96,7 +96,7 @@ I have experience with both practices and decide to read the book to have a more
  
 * **abstract Time utils in other class**: it makes impossible to mock using them directly. It will make your life easier when testing.
 
-* **good practices for acceptance tests**: it means that acceptance criteria have been met and also, for regression to make sure that previous functionality was not broken. 
+* **good practices for acceptance tests**: it means that acceptance criteria have been met and also, for regression, to make sure that previous functionality was not broken. 
 You are going to need a test implementation layer, an application driver layer (interacts with the application and return results). Selenium would be an application driver per example. 
 You should put the data required for it to run (example create a user using the API, not directly in the database - this way you "stress" more your system). Always pull for data instead of doing "wait2seconds" to check if an email arrived. It can (if it's controlled) or can't use external services. In the book they use test doubles and use kind of integration tests (once a day to run per example). They also consider this tests as a kind of end to end test.
 
@@ -122,7 +122,7 @@ You should put the data required for it to run (example create a user using the 
 
 * **what exactly is an environment**: it's a resource that you need to run your application.
 
-* **managing environments**: I think didn't much more sense the details because it didn't talk about containerization, but it mentions Puppet, that is a good tool for configuration management.
+* **managing environments**: I think it didn't make sense the details because it didn't mention about containerization, but it mentions Puppet, that is a good tool for configuration management.
 
 * monitor your network and version control your network configuration.
 
