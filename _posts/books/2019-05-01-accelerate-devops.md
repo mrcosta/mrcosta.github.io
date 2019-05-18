@@ -17,14 +17,14 @@ permalink: 2019-05-01-accelerate-devops
     <img src="{{ site.url}}/assets/images/books/accellerate-devops.jpg" alt="accelerate devops" width="200"/>
 </p>
 
-## 1. Some thoughts
+# **1. Some thoughts**
 
 It's good to work in projects that use the latest practices applied by the industry, but sometimes that is not the case
 and you have to sell this fish to your boss in order to change organization. Sometimes just changing processes for the
 sake of trying to make the company is not enough, so have numbers and a whole book to prove their point with numbers
 is something that makes you even more confident to purpose something at your workspace.  
 
-## 2. What they found
+# **2. What they found**
 
 * velocity is designed to be used as a capacity planning tool (how long it will take to finish the tasks);
 * the measure should focus on outcomes, not output
@@ -39,7 +39,7 @@ is something that makes you even more confident to purpose something at your wor
 * the fact that software delivery performance matters provides a strong argument against outsourcing the development of software
 that is strategic to your business.
 
-## 3. Measuring Culture
+# **3. Measuring Culture**
 
 * basic assumptions are formed over time as members of a group or organizations make sense of relationships, 
 events, and activities. And are things that we may find difficult to articulate.
@@ -68,7 +68,7 @@ typically emerge from a complex interplay of contributing factors.
 
 To change the culture: start by changing how people behave, what they do.
 
-## 4. Technical Practices
+# **4. Technical Practices**
 
 Many Agile adoptions have treated technical practices as secondary as compared to the management and team practices. The
 research shows that technical practices play a vital role in achieving these outcomes. The research also found that Continuous
@@ -112,7 +112,7 @@ test data for running automated tests on demand.
 **Trunk Based Development**: it was correlated more with high delivery performance. Teams had fewer than three active
 branches. Teams working with short-lived branches perform better than the ones with longer-lived branches.
 
-## 5. Architecture
+# **5. Architecture**
 
 Employing the latest whizzy microservices architecture deployed on containers is no guarantee of higher
 performance if you ignore these characteristics.
@@ -135,13 +135,13 @@ performance. When the tools provided actually make life easier for the engineers
 them of their own free will. This is a much better approach than forcing them to use tools that have been chosen for the
 convenience of other stakeholders.
 
-## 6. Integrating infosec into the delivery lifecycle
+# **6. Integrating infosec into the delivery lifecycle**
 
 Build security from scratch, when is the best moment to do this kind of preparation. Building
 security improves delivery performance because you spent less time remediating security
 issues.
 
-## 7. Management practices for software
+# **7. Management practices for software**
 
 * limit work in progress
 * visual displays with productivity metrics and aligning them with operational goals
@@ -149,7 +149,7 @@ issues.
 
 high performers: peer review (with the team) instead of bureaucratic process with external entities.
 
-## 8. Product Development
+# **8. Product Development**
 
 * user research from the very beginning of the product lifecycle.
 * use of MVPs
@@ -157,7 +157,7 @@ high performers: peer review (with the team) instead of bureaucratic process wit
 * work (features) in small batches
 * update specifications without requiring the approval of people outside the team
 
-## 9. Making Work Sustainable
+# **9. Making Work Sustainable**
 
 **Deployment pain**: the fear and anxiety that engineers can feel when deploying something in production.
 They find that where code deployments are most painful, you'll find the poorest software delivery performance,
@@ -189,7 +189,7 @@ a blame-free environment, striving to learn from failures, and communicating a s
 * organizational performance. When organizational values and individual values aren't aligned, you are more
 likely to see burnout in employees.
 
-## 10. Employee satisfaction, identity, and engagement
+# **10. Employee satisfaction, identity, and engagement**
 
 They found that employees in high-performing teams were 2.2 times more likely to recommend their organization
 to a friend: highly engaged workers are associated with the high performers' companies.
@@ -204,7 +204,7 @@ Continuous Delivery
 Lean Practices
 ```
 
-## 11. Transformational Leadership
+# **11. Transformational Leadership**
 
 Good leaders affect a team's ability to deliver code, architect good systems, and apply Lean principles to
 how the team manages its work and develops products:
