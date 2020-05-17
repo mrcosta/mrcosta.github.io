@@ -80,15 +80,13 @@ h1 {
 
 h2 {
   // mobile first
-  font-weight: bold;
   @include font-size(19px);
   @include MQ(M) {
-    @include font-size(35px);
+    @include font-size(27px);
   }
 }
 
 h3 {
-  font-weight: bold;
   @include font-size(12px);
   @include MQ(M) {
     @include font-size(23px);
@@ -98,7 +96,7 @@ h3 {
 h4 {
   @include font-size(16px);
   @include MQ(M) {
-    @include font-size(24px);
+    @include font-size(21px);
   }
 }
 
@@ -174,7 +172,7 @@ a.default-anchor {
 }
 
 div.default-page-content {
-  h2, h3, h4, h5, h6 { color: $base-00; }
+  h4, h5, h6 { color: $base-00; }
 }
 
 body {
@@ -377,7 +375,7 @@ div.page-content {
     min-height: 400px;
   }
 
-  h1 {
+  h1, h2, h3 {
     color: $base-08;
   }
 }
@@ -494,7 +492,7 @@ body.theme-base-01 {
   }
 
   div.page-content {
-    h2, h3, h4, h5, h6 { color: $base-01; }
+    h4, h5, h6 { color: $base-01; }
   }
 
   font-weight: 300;
