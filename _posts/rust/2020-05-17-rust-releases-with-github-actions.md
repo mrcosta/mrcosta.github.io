@@ -8,6 +8,7 @@ categories:
 - rust, ci, releases, targets, github actions, github
 permalink: rust-releases-with-github-actions
 ---
+{% raw %}
 [GitHub Actions](https://github.com/actions) has been growing at a fast pace and I've been using it in some pet projects. In a recent one, I tried the support for binary releases (CLI tools). Currently, the Infrastructure Rust team is also [evaluating GitHub Actions](https://blog.rust-lang.org/inside-rust/2020/04/07/update-on-the-github-actions-evaluation.html) so you expect support for different scenarios to be easy to setup.
 
 I had trouble finding good and detailed material about how to setup releases for multiple targets with Rust for small projects, so I decided to document it myself hoping that it can help others. 
@@ -126,9 +127,9 @@ Check out our project code using `actions/checkout@v2` in order to execute the n
   run: cargo build --release --locked
 ```
 
-Execute `cargo build` command that generates the project's binary in release mode(with optimizations for the target platform).
+Execute `cargo build` command that generates the project's binary in release mode (with optimizations for the target platform).
 
-### 2.2.4 Bump version and push tag/create release]
+### 2.2.4 Bump version and push tag/create release
 
 ```yaml
 - name: Bump version and push tag/create release point
@@ -389,3 +390,4 @@ jobs:
           tag: ${{ github.event.client_payload.new_version }}
           overwrite: true
 ```
+{% endraw %}
