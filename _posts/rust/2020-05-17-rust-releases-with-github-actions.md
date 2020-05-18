@@ -183,7 +183,7 @@ This is a different project, so we have a different folder structure (check it o
 
 The difference in the structure here is that releasing binaries for multiple targets requires a separated job to create a tag that is the same one used by Linux, Windows and macOS platforms. 
 
-Since we're going to execute jobs in different VMs for each platform, is not possible right now to share information about the newly created tag only using `tag: ${{ steps.bump_version.outputs.new_tag }}` between different platforms.
+Since we're going to execute jobs in different VMs for each platform, is not possible right now to share information about the newly created tag only using `tag: ${{ steps.bump_version.outputs.new_tag }}` between jobs running in different platforms.
 
 ## 3.1 Create new tag and dispatch repository event
 
@@ -221,7 +221,7 @@ This job has 3 steps:
 
 * checkout code
 * bump the version and push tag/create a release
-* dispatch a `tag created event`
+* dispatch a `tag-created` event
 
 The first two steps was described previously [here](#22-release-job-and-its-steps), so let's focus on the third one:
 
@@ -308,7 +308,7 @@ name: Build and Release
             asset_name: leis-municipais-macos-amd64
 ```
 
-`strategy` and `matrix` means that you have more than [one variation of environment](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix) to run your job in. Is like an array where each block inside `include` specifies one configuration. In our example is for `ubuntu-latest` and `macos-latest`. `arfifact_name` and `asset_name` are also necessary for the next steps(`artifact_name` maybe could be omitted since they're the same).
+`strategy` and `matrix` means that you have more than [one variation of environment](https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idstrategymatrix) to run your job in. Is like an array where each block inside `include` specifies one configuration. In our example is for `ubuntu-latest` and `macos-latest`. `arfifact_name` and `asset_name` are also necessary for the next steps(`artifact_name` maybe could be omitted since they have the same value).
 
 ## 3.5 Release job and its steps
 
@@ -321,7 +321,7 @@ name: Build and Release
   run: cargo build --release --locked
 ```
 
-Here is the same as we saw in <previous_section_link_here>. The difference is that all steps run for each different platform.
+Here is the same as we saw in [here](#222-checkout-step). The difference is that all steps run for each different platform.
 
 ### 3.5.2 Upload binary to release
 
@@ -358,10 +358,10 @@ pull_request:
       - master
 ```
 
-And I learnt that means that this is going to make the workflow to be executed [NOT just when the PR it's merged](https://developer.github.com/v3/activity/events/types/#pullrequestevent) into master but even when a pull request is created. I didn't want that so I removed.
+And I learnt that means that this is going to make the workflow to be executed [NOT just when the PR it's merged](https://developer.github.com/v3/activity/events/types/#pullrequestevent) into master but even when a pull request is created. I didn't want that, so I removed.
 
 
-## 5.2 Solving the releasing binaries for a single target for Windows/macOS platforms]
+## 5.2 Solving the releasing binaries for a single target for Windows/macOS platforms
 
 As mentioned in [one of the previous sections](#224-bump-version-and-push-tagcreate-release) `anothrNick/github-tag-action@1.17.2` action only works in Linux VMs. Using the same approach that we used for multiple target releases, we could solve the problem for a single Windows release, per example, with something like (beware I didn't test this workflow):
 
