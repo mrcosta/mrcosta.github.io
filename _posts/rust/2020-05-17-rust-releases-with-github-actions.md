@@ -37,7 +37,8 @@ Releasing binaries for a single target is simple. The folder structure for our p
     create_tag_and_release.yml
 ```
 
-If you're familiar with GitHub workflows, `ci.yml` is where we execute common Continuous Integration jobs like unit/integration tests. For most of my Rust projects, I usually run `cargo check`, `cargo test`, `cargo fmt` and `cargo clippy`. 
+If you're familiar with GitHub workflows, `ci.yml` is where we execute common Continuous Integration jobs like unit/integration tests. For most of my Rust projects, I usually run `cargo check`, `cargo test`, `cargo fmt` and `cargo clippy`. You
+can check what GitHub actions I use for running cargo commands and the entire file [here](https://github.com/mrcosta/alemanes/blob/master/.github/workflows/ci.yml).
 
 Most of the times you want to release only when the other jobs are successful. In our case, it means that all jobs in `ci.yml` are passing. In our project we achieve this by using GitHub project's settings:
 
