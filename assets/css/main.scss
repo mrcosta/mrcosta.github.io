@@ -293,20 +293,21 @@ footer.main-footer {
   li {
     display:inline-block;
   }
-  li > a {
-    width: 32px;
-    height: 32px;
-    background: $base-07;
-    background-image: url("./images/socials-icons.svg");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
+//   li > a {
+//         text-decoration: none;
+//     width: 32px;
+//     height: 32px;
+//     background: $base-07;
+//     background-image: url("./images/socials-icons.svg");
+//     background-size: 224px 64px;
+//     border-radius: 0.25em;
+//     @include transition(background-color 0.2s);
+//     border-bottom-color: transparent;
 
-    &:hover {
-      background-color: $base-08;
-    }
-  }
+//     &:hover {
+//       background-color: $base-08;
+//     }
+//   }
 
   li a.twitter {
     background-position: 0 0;
@@ -353,18 +354,19 @@ footer.main-footer {
 }
 
 .no-svg footer.main-footer ul.social-media li a {
-  width: 32px;
-    height: 32px;
-    background-color: $base-07;
-    background-image: url("./images/socials-icons.png");
-    background-size: 224px 64px;
-    border-radius: 0.25em;
-    @include transition(background-color 0.2s);
-    border-bottom-color: transparent;
-
-    &:hover {
-      background-color: $base-08;
-    }
+//     width: 32px;
+//     height: 32px;
+//     background-color: $base-07;
+//     background-image: url("./images/socials-icons.png");
+//     background-size: 224px 64px;
+//     border-radius: 0.25em;
+//     @include transition(background-color 0.2s);
+//     border-bottom-color: transparent;
+//
+//     &:hover {
+//       background-color: $base-08;
+//     }
+text-decoration: none;
 }
 
 div.page-content {

@@ -1,27 +1,26 @@
 <h6>Follow me</h6>
 
 <ul class="social-media">
-
+    {% if site.harmony.social.github %}
+    <li>
+        <a title="{{ site.harmony.social.github }} on Github"
+           href="https://github.com/{{ site.harmony.social.github }}"
+           target="_blank"><i class="fab fa-github" style="color:black;font-size: 32px;"></i></a>
+    </li>
+    {% endif %}
     <li>
         <a title="{{ site.harmony.social.gplus }}"
-           href="mailto: mateuscomp@gmail.com"
-           class="google wc-img-replace"></a>
+           href="mailto: mateuscomp@gmail.com"><i class="fas fa-envelope" style="color:black;font-size: 32px;"></i></a>
     </li>
-
+    <li>
+        <a title="Mateus Costa on LinkedIn"
+           href="https://www.linkedin.com/in/mateusrodriguescosta/"><i class="fab fa-linkedin" style="color:black;font-size: 32px;"></i></a>
+    </li>
     {% if site.harmony.social.twitter %}
     <li>
         <a title="{{ site.harmony.social.twitter }} on Twitter" 
             href="https://twitter.com/{{ site.harmony.social.twitter }}" 
-            class="twitter wc-img-replace" target="_blank">Twitter</a>
+            target="_blank"><i class="fab fa-twitter" style="color:black;font-size: 32px;"></i></a>
     </li>   
     {% endif %}
-
-    {% if site.harmony.social.github %}
-    <li>
-        <a title="{{ site.harmony.social.github }} on Github" 
-            href="https://github.com/{{ site.harmony.social.github }}" 
-            class="github wc-img-replace" target="_blank">Github</a>
-    </li>
-    {% endif %}
-
 </ul>
