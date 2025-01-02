@@ -28,14 +28,9 @@ Harmony is a responsive jekyll theme.
 
 ## How to install/run
 
-1. Run `bundle install`
-2. Edit the _config.yml on root directory. Change `url` property to to 
-`http://127.0.0.1:4000` since you are going to run on localhost.
-3. Run the jekyll server by having: `jekyll serve --baseurl ''`
+`docker compose up jekyll-server` and go to `http://0.0.0.0:4000/`
 
-Point your browser to [http://localhost:4000](http://localhost:4000).
 
-Note: If you are a windows user please refer to this nice website - http://jekyll-windows.juthilo.com/ by Julian Thilo to configure ruby + jekyll on windows.
 
 ## Options/Usage
 

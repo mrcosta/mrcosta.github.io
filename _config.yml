@@ -4,7 +4,7 @@
 url: https://mrcosta.github.io
 
 # Localhost 
-#url: http://127.0.0.1:4000  
+#url: http://127.0.0.1:4000
 
 disqus_shortname: mateuscosta
 
@@ -33,7 +33,6 @@ harmony:
   # Profile links, leave blank to ignore
   social: 
     github: mrcosta
-    twitter: mrcambota
 
 # Conversion / Build settings 
 markdown:    kramdown
@@ -50,6 +49,14 @@ exclude:
   - .gitignore
   - .sass-cache
   - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - docker-compose.yml
+  - frontmatter.json
+  - .frontmatter
 
 # Sass conversion configs
 sass:
