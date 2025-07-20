@@ -29,6 +29,7 @@ Harmony is a responsive jekyll theme.
 ## How to install/run
 
 `docker compose up jekyll-server` and go to `http://0.0.0.0:4000/`
+Notes/Reference: https://t3st3ro.github.io/2022/11/02/self-contained-jekyll-with-docker.html
 
 
 
