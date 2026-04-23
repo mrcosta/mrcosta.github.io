@@ -12,3 +12,4 @@ mrcosta.github.io.iml
 **/.jekyll-cache
 **/.jekyll-metadata
 **/vendor
+.claude
